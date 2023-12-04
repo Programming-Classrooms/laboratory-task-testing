@@ -132,7 +132,7 @@ jobs:
         id: get-commits-if-merged
         run: |
           echo "COMMITS_IF_MERGED<<EOF" >> $GITHUB_ENV
-          echo "$(git log ${{ github.event.pull_request.merge_commit_sha }} --not origin/${{ github.base_ref }}~1 --oneline --pretty=format:"%B" | grep -v '^$' | tac | head -n -1 | nl -w 1 -s ' ' | sed 's/^/*/; s/ /.* /')" >> $GITHUB_ENV
+          echo "$(git log ${{ github.event.pull_request.merge_commit_sha }} --not origin/${{ github.base_ref }}~1 --oneline --pretty=format:"%B" | grep -v '^$' | tac | head -n -2 | nl -w 1 -s ' ' | sed 's/^/*/; s/ /.* /')" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
 
 
