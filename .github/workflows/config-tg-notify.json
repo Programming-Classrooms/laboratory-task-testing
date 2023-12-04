@@ -32,7 +32,7 @@
         "str-name-rus": "Переоткрытие **PR** автором"
     },
     "pr-review-changes-requested": {
-        "is-active": false,
+        "is-active": true,
         "str-name-rus": "Запрос изменений в **PR**"
     },
     "pr-review-commented": {
